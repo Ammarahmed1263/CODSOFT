@@ -1,11 +1,11 @@
 import { View, StyleSheet, Share, Alert } from "react-native";
 import Button from "./Button";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useData } from "./StoreProvider";
-import Favorites from "../screens/Favorites";
 
 export default BodyFooter = ({reload, data}) => {
-    const { saveData, getData, removeData, isFavorite, setIsFavorite } = useData()
+    const { saveData, getData, removeData, isFavorite, setIsFavorite } = useData();
+    
     useEffect(()=> {
         setIsFavorite(false);
     }, [data])
